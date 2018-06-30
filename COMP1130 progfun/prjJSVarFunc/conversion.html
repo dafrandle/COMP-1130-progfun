@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--**************************** HEAD ********************************-->
+   <head>
+      <title>Circumference Calculator</title>
+      <meta charset="utf-8" />
+<!--****************************** Author *******************************
+conversion.html
+Purpose: Find the circumference of a circle from the radius.
+Dustin Frandle - dafrandle@yahoo.com
+Project: Variable Function
+Written - 2/10/2016
+Reversion 1 - 2/24/2016 | added ";" to some css lines
+
+-->
+<!--**************************** Problem Solving *************************
+The main problem I had was that I jumped into this to fast and didn't read everything I was required to do. 
+Henceforth I had to back up and add/redo parts of the page so that it had the elements that it was supposed to have. 
+(I stared out with a prompt that you brought up by clicking the button)
+This obviously wasted several hours of my time. I'll call it a learning experience.
+The only coding problem I has was getting the code on that currently resides on line 18 of conversion.js, I couldn't figure out where to place it to get it to work correctly.
+I solved this by using google to find info (mainly on w3schools) and samples of code so I could figure out the syntax, also a lot of trial and error.
+-->
+<!--****************************** Debugging *****************************
+conversion.js must be in the same file directory as this html.
+An Internet connection is required for the image to load.
+If you have a connection and the image wont show up make suer wikimedia.org is not blocked on your connection.
+If wikimedia.org is not blocked and you still can't see the image then the image may have been taken down, or the site itself is down temporally.
+-->
+      <script type="text/javascript" src="conversion.js"></script>  <!-- javascript code link -->   
+      <!-- style for form and image -->
+      <style type="text/css">
+      .butn {
+         display: inline-block;
+         border: 5px solid #1ac6ff;
+         color: black;
+         padding: 15px 20px;
+         font-size: 13px;
+         text-align: center;
+         outline: none;
+         background-color: white;
+         border-radius: 15px;
+         box-shadow: 0 9px #004d66;
+      }
+      
+      .butn:hover {
+         background-color: #f1f1f1;
+      }
+
+      .butn:active {
+         background-color: #f1f1f1;
+         box-shadow: 0 5px #004d66;
+         transform: translateY(4px);
+      }
+      
+      .input {
+         text-align:center;
+      }
+      
+      img.diagram {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+      }
+      </style>
+   </head>
+<!-- *************************** BODY ********************************-->
+   <body>
+      <div class="top"> <!-- header and an image -->
+         <h1 style="font-size:60px;text-align:center;margin:auto;font-family: Impact, Charcoal, sans-serif;font-weight:normal">Circumference Calculator</h1> <!-- header, at top of page -->
+         <br />
+         <br />
+         <!-- picture of a circle, below the header -->
+            <img
+            class="diagram"
+            height="300" 
+            width="300"
+            src="https://upload.wikimedia.org/wikipedia/commons/3/36/Pi_eq_C_over_d.svg"
+            alt="Circle Diagram (credit wikimedia) You must have an Internet connection for this image to show"
+            >
+         <br />
+         <br />
+      </div>
+      <div class="input"> <!-- form in middle of page -->
+         <form id="radiusBox">
+            Enter radius:
+            <input 
+               type="text"
+               name="radiusInput"
+               id="radiusInput"
+               value="8"
+               onblur="getInput()"
+            />
+            <br />
+            <br />
+            <button onclick="getInput()" class="butn" type="button"><b>Calculate</b></button>
+         </form>
+      </div>
+      <div class="answerDisplay"> <!-- answer text, dose not show up until an answer is calculated -->
+         <br />
+         <br />
+         <br />
+         <h2 style="text-align:center" id="ans"></h2>  
+      </div>
+   </body>
+</html>

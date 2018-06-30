@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--**************************** HEAD ********************************-->
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+   <!--****************************** Author *******************************
+   prjDOM.html
+   Purpose: Utilize the DOM
+   Dustin Frandle - dafrandle@yahoo.com
+   Project: DOM
+   Written - 4/12/2016
+
+   -->
+      <script src="prjDOM.js"></script>  <!-- javascript code link -->
+      <style>
+      html {
+         background-color: gray;
+      }
+      body {
+         background-color: white;
+         margin: 0px auto;
+         max-width: 800px;
+         width: auto;
+         border-style: double;
+         font-family: Arial, Helvetica, Verdana, sans-serif;
+         padding: 5px;
+         padding-left: 15px;
+         padding-right: 15px;
+         margin-top: 80px;
+         height: auto;
+      }
+      body,h1 {
+         text-align: center;
+      }
+      body,p {
+         text-align: justify;
+      }
+      .even {
+         background-color: #E8EAFF;
+         margin: 0px;
+         padding: 3px;
+      }
+      .odd {
+         margin: 0px;
+         padding: 3px;
+      }
+      hr {
+         border-style: dotted;
+      }
+      </style>
+   </head>
+<!-- *************************** BODY ********************************-->
+   <body onload="colorCode()">
+      <h1> What is the Document Object Model? </h1><br /><hr />
+      <p><b>The Document Object Model</b>, or DOM is a logical structure of documents (in this case just 2) and how those documents can be accessed and manipulated.
+      Think of a tree shaped thinking map, except instead of putting the elements of your story in it we put the elements of your web page in it.
+      Each level has a tag, for example the top wold be the &lt;html> tag. The next level down would contain all of the previous levels children, for example &lt;head>, and &lt;body>.
+      If you know what the DOM is and how to use it you can add, remove, and edit this map, and thus the web page itself.
+      </p>
+      
+      <p><b>Some examples</b> of when I have used the DOM are: anytime I have used innerHTML, which is pretty much all the time now. (Used in all but the first project)
+      That is also the only use of the DOM I made (as far as I know) in all but this project. In this project I use it to make the alternating text background colors and that link at the bottom.
+      The following five paragraphs are sample text.
+      </p>
+      
+      <p>Donec egestas rhoncus nisl, eget consequat dolor tempus a. Duis at felis id urna lacinia interdum.
+      Proin porta turpis viverra faucibus malesuada. Donec vestibulum ornare libero sit amet fermentum.
+      Vestibulum sodales fringilla sodales. Morbi vel pulvinar mi, at pretium tortor. Pellentesque tincidunt ultricies libero.
+      Vestibulum odio sapien, rutrum eu odio ut, semper condimentum augue. Suspendisse aliquet consectetur enim, eget dictum nisl accumsan vitae.
+      Aliquam dui sapien, laoreet et felis vitae, scelerisque gravida metus. Suspendisse leo diam, tristique quis aliquet ac, tristique a nulla.
+      </p>
+      
+      <p>Nullam fringilla tempus viverra. Morbi in nisl ante. Nunc fringilla, lacus ullamcorper ornare congue, metus erat dapibus arcu, nec sagittis urna leo nec ipsum.
+      Proin egestas dictum tellus sed blandit. Aliquam sed convallis leo, consequat tempor mi. Pellentesque tincidunt ante eu ligula pulvinar efficitur.
+      Nulla sed sem tincidunt, tempor tellus ac, varius dui. Morbi a tortor tincidunt, consequat diam ac, faucibus ante. Phasellus eleifend non sem in vestibulum.
+      </p>
+      
+      <p>Sed vulputate vehicula consectetur. Integer in scelerisque lacus, vel finibus urna. Sed accumsan congue convallis.
+      Integer cursus sem diam, vehicula lobortis metus lobortis bibendum. Morbi nec dictum ante. Cras aliquam mi id efficitur aliquet.
+      Sed id quam tincidunt, dictum ligula ac, tincidunt metus.<br />
+      </p>
+      
+      <p>Phasellus ullamcorper sollicitudin scelerisque. Nullam convallis dui vel augue pharetra, vel commodo nunc tempus. Praesent dui dolor, blandit a vulputate id, efficitur at nunc.
+      Maecenas lacinia lorem sed mattis pellentesque. Nunc sit amet enim ex. Duis lacus ante, sodales quis porta a, ultricies sit amet eros. Etiam libero ex,
+      feugiat in pharetra ac, vulputate at orci. Aenean ut rutrum tellus. Sed ut lectus ac elit malesuada tempus vel sed risus.
+      Aenean eu egestas quam. Maecenas vehicula et ante quis eleifend. Vestibulum dignissim viverra ligula.
+      </p>
+      
+      <p>Curabitur tincidunt augue sit amet tortor egestas, eu imperdiet ex tempor. Mauris ac orci ut lacus egestas elementum a sit amet est.
+      Vestibulum tincidunt metus ac consectetur rutrum. Aenean vehicula vulputate efficitur. Morbi volutpat ultrices rhoncus. In sit amet condimentum sapien.
+      In eleifend nisi non risus sagittis fringilla. Sed vitae euismod tellus. Phasellus nisi purus, condimentum eu est vitae, auctor ultrices mi.
+      Duis egestas lectus dapibus sem sagittis commodo. Fusce ullamcorper velit molestie ullamcorper interdum. Vestibulum cursus nunc urna, vitae dapibus lorem consequat eu.
+      </p><hr />
+      
+      <div id="pasteLink" style="text-align: center;">
+      </div>
+      
+   </body>
+</html>

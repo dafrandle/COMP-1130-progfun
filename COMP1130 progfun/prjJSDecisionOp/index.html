@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--**************************** HEAD ********************************-->
+   <head>
+      <title>Medical Records Login</title>
+      <meta charset="utf-8" />
+<!--****************************** Author *******************************
+index.html
+Purpose: Medical Database system
+Dustin Frandle - dafrandle@yahoo.com
+Project: Decision Operator
+Written - 2/24/2016
+
+-->
+<!--****************************** Debugging *****************************
+index.html must be in the same directory as registration.html and script.js
+-->
+      <script src="script.js"></script>  <!-- javascript code link -->
+      <!-- style for this page -->
+      <style type="text/css"> 
+      body {
+         text-align:center;
+         font-family: Arial, Helvetica, Verdana, sans-serif;
+      }
+      #login {
+         margin: auto;
+         border-style: solid;
+         border-color: black;
+         border-width: thick;
+         padding: 30px;
+         width: 300px;
+         font-size: 18px;
+         background-color: #C4BFBE;
+      }
+      section {
+         margin-left: 130px;
+         margin-right: 130px;
+         font-size: 32px;
+      }
+      #loginButton {
+         padding: 6px;
+         padding-right: 12px;
+         padding-left: 12px;
+         font-size: 20px;
+      }
+      #idInput {
+         margin-left: 17px;
+      }
+      #passInput {
+         margin-left: 0px;
+      }
+      #error {
+         color: red;
+         padding-top: 0px;
+         padding-bottom: 0px;
+         font-size: 9px;
+      }
+      </style>
+   </head>
+<!-- *************************** BODY ********************************-->
+   <body>
+      <section>
+         <h1>Medical Records Login</h1>
+         <div id="login">
+            <form>
+               User ID:
+               <input
+                  type="text"
+                  name="idInput"
+                  id="idInput"
+                  value="mayo"
+                  />
+               <br />
+               <br />
+               Password:
+               <input
+                  type="text"
+                  name="passInput"
+                  id="passInput"
+                  value="Please99!"
+               />
+               <br />
+               <h2 id="error"><br /></h2>
+               <br />
+               <button onclick="isValidUser()" id="loginButton" type="button">Login</button>
+            </form>
+         </div>
+      </section>
+   </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<!--**************************** HEAD ********************************-->
+   <head>
+      <title>Dustin Frandle Homepage</title>
+      <meta charset="utf-8" />
+<!--****************************** Author *******************************
+prjJSintro.html
+Purpose: Homepage that shows my ability to make code
+Dustin Frandle - dafrandle@yahoo.com
+Project: JS Intro
+Written - Jan 29th 2016
+
+-->
+<!--**************  Document your problem-solving skills ****************
+I had only two problems,
+
+(1) Getting the javascript file linked up with the HTML file
+I had originally thought that it would require a simlar system as CSS needs, and i was right, but I didn't know how so I googled how to 
+(expect to hear that a lot throughout the corse)
+
+(2) Getting "getUserID()" to give its variable to "displayUserID()"
+I now know how to declare global variable. I didn't when I first wrote it and thanks to the console on chrome I figured out why really quick. 
+Then I (you guessed it) googled how to make a global variable.
+
+-->
+<!--****************************** Debuging *****************************
+If page doesn't display correctly make sure "prjJSIntro.css" is in the same directory as prjJSintro.html
+If scripts fail to load make sure "prjJSIntro.js" is in the same directory as prjJSintro.html
+If pictuer is not present at tope of screen make sure "dus.png" is in the same directory as prjJSintro.html
+
+NOTE - To pass validation it was required to move the comment block below the meta tag.
+-->
+      <link rel="stylesheet" type="text/css" href="prjJSIntro.css" /> <!-- css code link -->
+      <script type="text/javascript" src="prjJSIntro.js"></script>  <!-- javascript code link -->
+      <script>    <!-- javascript. |  var dis = prompt - Asks if you want to see text before showing it. If you answer "yes" it shows it, -->
+         function displayInfo()
+         {
+            var dis = prompt("show internal JavaScript function? (yes to show)")
+            if (dis === "yes")
+            {
+               document.write("<h3> Describe the difference between these two lines of code: function calcTotal( ) and calcTotal( ); </h3>")
+               document.write("<p><b>(1) What happens as the browser parses each of these lines?</b></p>")
+               document.write("<p> When the browser parses &quot;function calcTotal( )&quot; it sees that this is a JavaScript function and stores it in memory while it waits for it to be called later in the code. </p>")
+               document.write("<p> When the browser parses &quot;calcTotal( );&quot; it recalls the function from memory and runs it. </p><br />")
+               document.write("<p><b>(2) Why does one line end with a semi-colon and the other line of code doesn't?</b></p>")
+               document.write("<p> A semi-colon is like a period. It tells the browser the line of code is done and to stop parsing at that point. </p>")
+               document.write("<p> &quot;function calcTotal( )&quot; does not have this because the browser would stop before it had the script. &quot;calcTotal( );&quot; does have it so that the browser stops and doesn't take the rest of that page of text as part of the line. </p><br />")
+            }
+            else
+            {}
+         }
+      </script>
+   </head>
+<!-- *************************** BODY ********************************-->
+   <body>
+      <div class='text1'>
+         <img class="Me" src="dus.png" alt="Mug Shot"> <!-- Pictuer at top of scren -->
+         <div class='top'>    <!-- text that will show up just below the pictuer -->
+            <h1>This page contains a picture (above this), a paragraph, and some javascript.</h1>
+            <p>The most important thing that I learned from the Learning Activities (Create a Web Page) is to create a template. <br />
+            I did not think at first that I would need a template because I  assumed everything would end up being different. <br />
+            I know see how this is not only a flawed idea but also bad practice. I had a general grasp on everything else from past experiences.</p><br />
+         </div>
+      </div>
+      <div class='text2'> <!-- Script that is in this file -->
+         <script>
+            displayInfo();
+         </script>
+      </div>
+      <div class='text3'> <!-- Script that is in prjJSIntro.js -->
+         <script>
+            getUserID();
+            displayUserID();
+         </script>
+      </div>
+   </body>
+</html>

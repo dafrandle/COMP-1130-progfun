@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--**************************** HEAD ********************************-->
+   <head>
+      <title>The Well Stacked Pizza Co.</title>
+      <meta charset="utf-8" />
+<!--****************************** Author ******************************* graphics
+prjjQuery.html
+Dustin Frandle - dafrandle@yahoo.com
+Project: jQuery
+Written - 4/25/2016
+
+-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> <!-- jQuery CDN -->
+      <link rel="stylesheet" type="text/css" href="prjjQuery.css" />                           <!-- css code link -->
+      <script src="prjjQuery.js"></script>                                                     <!-- jquery code link -->
+   </head>
+<!-- *************************** BODY ********************************-->
+   <body>
+      <div id="head">
+         <img src="graphics/icon.png" alt="The Well Stacked Pizza Co." id="icon">
+         <h1>Welcome to the Well Stacked Pizza Co.</h1>
+         <h2>Call us at (333)374-962</h2>
+         <div id="toolTip">
+            <h2>Click on a pictuer to bring up the information</h2>
+         </div>
+         <h2>
+            <noscript>Javascript is disabled</noscript>
+         </h2>
+         <hr />
+         <!--------------------------------------------------------------------------- Meal boxes ----------------------------------------------------------------->
+         <!-------------------- Meal one --------------------->
+         <div class="mealBox">
+            <div>
+               <h2> The Buster <br /> $2.00 </h2>
+               <img src="graphics/thebuster.png" alt="The Buster" class="mealPic" rel="mealOneInfo">
+            </div>
+            <div class="mealInfo">
+               <p>Slice of pizza/w one toping</p><hr /><p>Fries</p><hr /><p>Drink</p><hr /><p>Add an extra topping for $0.25</p>
+            </div>
+         </div>
+         <!-------------------- Meal two --------------------->
+         <div class="mealBox">
+            <div>
+               <h2> The Double D-Lux <br /> $5.00 </h2>
+               <img src="graphics/d-lux.png" alt="The Double D-Lux" class="mealPic" rel="mealTwoInfo">
+            </div>
+            <div class="mealInfo">
+               <p>Slice of pizza/w one toping</p><hr /><p>Fries</p><hr /><p>Drink</p><hr /><p>Chicken Salad</p><hr /><p>Add an extra topping for $0.25</p>
+            </div>
+         </div>
+         <!-------------------- Meal three --------------------->
+         <div class="mealBox">
+            <div>
+               <h2> The Full Rack <br /> $10.00 </h2>
+               <img src="graphics/rack.png" alt="The Full Rack" class="mealPic" rel="mealThreeInfo">
+            </div>
+            <div class="mealInfo">
+               <p>Whole pizza/w one toping</p><hr /><p>Fries</p><hr /><p>Drink</p><hr /><p>Add an extra topping for $0.25</p><hr /><p>Half'n'Half toppings for $0.50 per topping</p>
+            </div>
+         </div>
+         <!-------------------- Meal four --------------------->
+         <div class="mealBox">
+            <div>
+               <h2> Pizza Party Box <br /> $8.00 </h2>
+               <img src="graphics/WellStackedPizzaBox.png" alt="Pizza Box" class="mealPic" rel="mealFourInfo">
+            </div>
+            <div class="mealInfo">
+               <p>Whole pizza/w one toping</p><hr /><p>Add an extra topping for $0.25</p><hr /><p>Half'n'Half toppings for $0.50 per topping</p><hr /><p>delivery $5.00 + $1.00 per mile</p>
+            </div>
+         </div>
+         <!--------------------------------------------------------------------------- modal windows & shade ------------------------------------------------------------------->
+         <div class="jQueryInfoBox" id="mealOneInfo">
+            <img src="graphics/closeButton50x62.png" class="close" title="Close Window" alt="Close Window" />
+            <h2> The Buster <br /> $2.00 </h2><br />
+            <p>Slice of pizza/w one toping</p><hr /><p>Fries</p><hr /><p>Drink</p><hr /><p>Add an extra topping for $0.25</p>
+         </div>
+         
+         <div class="jQueryInfoBox" id="mealTwoInfo">
+            <img src="graphics/closeButton50x62.png" class="close" title="Close Window" alt="Close Window" />
+            <h2> The Double D-Lux <br /> $5.00 </h2><br />
+            <p>Slice of pizza/w one toping</p><hr /><p>Fries</p><hr /><p>Drink</p><hr /><p>Chicken Salad</p><hr /><p>Add an extra topping for $0.25</p>
+         </div>
+         
+         <div class="jQueryInfoBox" id="mealThreeInfo">
+            <img src="graphics/closeButton50x62.png" class="close" title="Close Window" alt="Close Window" />
+            <h2> The Full Rack <br /> $10.00 </h2><br />
+            <p>Whole pizza/w one toping</p><hr /><p>Fries</p><hr /><p>Drink</p><hr /><p>Add an extra topping for $0.25</p><hr /><p>Half'n'Half toppings for $0.50 per topping</p>
+         </div>
+         
+         <div class="jQueryInfoBox" id="mealFourInfo">
+            <img src="graphics/closeButton50x62.png" class="close" title="Close Window" alt="Close Window" />
+            <h2> Pizza Party Box <br /> $8.00 </h2><br />
+            <p>Whole pizza/w one toping</p><hr /><p>Add an extra topping for $0.25</p><hr /><p>Half'n'Half toppings for $0.50 per topping</p><hr /><p>delivery $5.00 + $1.00 per mile</p>
+         </div>
+         
+         <div id="modalShade"></div>
+         
+      </div>
+   </body>
+</html>

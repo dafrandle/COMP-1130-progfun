@@ -1,0 +1,8 @@
+These were completed in one of my first classes in college.
+They are simple programs that display my ability to use:
+HTML5
+CSS
+Java script
+and to some degree jQuery
+
+Simply go into a folder and open up the HTML file in your browser

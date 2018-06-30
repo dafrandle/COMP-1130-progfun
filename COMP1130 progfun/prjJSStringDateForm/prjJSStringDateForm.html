@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<!--**************************** HEAD ********************************-->
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+<!--****************************** Author *******************************
+prjJSStringDateForm.html
+Purpose: use string functions
+Dustin Frandle - dafrandle@yahoo.com
+Project: String Date Form
+Written - 4/6/2016
+
+-->
+      <script src="prjJSStringDateForm.js"></script>  <!-- javascript code link -->
+      <link rel="stylesheet" type="text/css" href="prjJSStringDateForm.css" /> <!-- css code link -->
+   </head>
+<!-- *************************** BODY ********************************-->
+   <body onload="main()">
+      <div id="box">
+         <div id="head"><!----------------------------------------------------- START form --------------------------------------------------->
+            <h1 style="margin:2px;">Account Registration</h1>
+            <p style="font-size:13px; margin:2px;">Hit the tab key, or click outside of a box after you input something to enter information.</p> 
+            <p style="font-size:13px; margin:2px; color:red;">Do not press enter.</p>
+         </div>
+         <hr />
+         <div id="form">
+            <form id="userIdEntry"><!------------------------------------------------- ID ---------------------------------------------------->
+               <label for="userID">Enter ID</label>
+               <br />
+               <input
+                  type="text"
+                  name="userID"
+                  id="userID"
+                  value="6584315448"
+                  onblur="main()"
+               />
+            </form>
+            <p id="userIdResponse"></p>
+            <br />
+            <br />
+            <br />
+            <p class="spec">10-digit number, no dashes.</p>
+            <br />
+            <hr />
+            <form id="userNameEntry"><!--------------------------------------------- Name ----------------------------------------------------->
+               <label for="userName">Enter Name</label>
+               <br />
+               <input
+                  type="text"
+                  name="userName"
+                  id="userName"
+                  value="Amosis"
+                  onblur="main()"
+               />
+               <input
+                  type="text"
+                  name="userNameM"
+                  id="userNameM"
+                  value="G"
+                  onblur="main()"
+               />
+               <input
+                  type="text"
+                  name="userNameL"
+                  id="userNameL"
+                  value="Flemming"
+                  onblur="main()"
+               />
+            </form>
+            <br />
+            <br />
+            <br />
+            <p class="spec">First name, middle initial, last name. No punctuation please.</p>
+            <br />
+            <hr />
+            <form id="phoneNumEntry"><!--------------------------------------------- phone -------------------------------------------------->
+               <label for="phoneNum">Enter Your Phone Number</label>
+               <br />
+               <input
+                  type="tel"
+                  name="phoneNum"
+                  id="phoneNum"
+                  value="(687)145-4298"
+                  onblur="main()"
+               />
+            </form>
+            <p id="phoneNumResponse"></p>
+            <br />
+            <br />
+            <br />
+            <p class="spec">Format: (###)###-####  if your phone number has a different format, email us at registration@genericWebsitePlace.com</p>
+            <br />
+            <hr />
+            <form id="dobEntry"><!---------------------------------------------------- DOB --------------------------------------------------->
+               <label for="dob">Enter Your Birth Date</label>
+               <br />
+               <input
+
+                  type="date"
+                  name="dob"
+                  id="dob"
+                  value="1976-08-23"
+                  onblur="main()"
+               />
+            </form>
+            <p id="dobResponse"></p>
+            <br />
+            <br />
+            <br />
+            <p class="spec">If your browser dose not support date forms you will need to enter the date manually. The format is: yyyy-mm-dd</p>
+            <br />
+            <hr />
+         </div><!-------------------------------------------------------------------- END form ----------------------------------------------->
+         <div id="memberNumber">
+            <h4 id="mpn">Your member ID is:</h4>
+            <p id="memberID"></p>
+         </div>
+         <hr /><hr />
+         <a href="readme.html">Readme</a>
+      </div>
+   </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--**************************** HEAD ********************************-->
+   <head>
+      <title></title>
+      <meta charset="utf-8" />
+<!--****************************** Author *******************************
+prjJSArray.html
+Purpose: make a 2d array
+Dustin Frandle - dafrandle@yahoo.com
+Project: Array
+Written - 3/22/2016
+
+-->
+<!--****************************** Problem Solving ***********************
+I had no problems doing this project, because all of the things I didn't know how to do were solve in the labs, or in class.
+-->
+<!--****************************** Debugging *****************************
+prjJSArray.html and prjJSArray.js must be in the same file directory
+-->
+      <script src="prjJSArray.js"></script>  <!-- javascript code link -->
+      <!-- style for html elements -->
+      <style>
+      body{
+         text-align: center;
+         margin: 0px auto;
+         margin-top: 100px;
+         font-family: Arial, Helvetica, Verdana, sans-serif;
+         border-style: solid;
+         width: 600px;
+         height: auto;
+      }
+      #head{
+         font-size: 30px;
+      }
+      #calc{
+         font-size: 20px;
+         margin-bottom: 20px;
+      }
+      #shippingLevelDrop{
+         font-size: 20px;
+      }
+      #parcelTypeDrop{
+         font-size: 20px;
+      }
+      #answerBox{
+         border-style: solid;
+         border-width: 1px;
+         width: 150px;
+         font-size: 20px;
+         margin: 0px auto;
+         margin-bottom: 20px;
+      }
+      #calcButton{
+         margin-top: 4px;
+         font-size: 20px;
+      }
+      #tableButton{
+         font-size: 15px;
+      }
+      #labAnswers{
+         text-align: left;
+         padding: 1px;
+      }
+      </style>
+      
+      <!-- style for javascript output -->
+      <style>
+      #tableBody{
+         font-size: 20px;
+         border-style: solid;
+         padding: 20px;
+         padding-bottom: 50px;
+         padding-top: 8px;
+      }
+      #table{
+         margin: 0px auto;
+      }
+      </style>
+   </head>
+<!-- *************************** BODY ********************************-->
+   <body>
+   <div id="head">
+      <h1><strong>Shipping Rates</strong></h1>
+   </div>
+   <div id="calc">
+      <h3>Shipping Cost Calculator</h3>
+      <select id="shippingLevelDrop" onclick="shippingSwap()" >
+         <option value="No-Rush" id="shippingLevelSwitch" >Select Shipping</option>
+         <option value="Standard">Standard</option>
+         <option value="Expedited">Expedited</option>
+         <option value="Rush">Rush</option>
+      </select>
+      <select id="parcelTypeDrop" onclick="parcelSwap()" >
+         <option value="Letter" id="parcelTypeSwitch" >Select Parcel Type</option>
+         <option value="Small Parcel">Small Parcel</option>
+         <option value="Large Parcel">Large Parcel</option>
+         <option value="Pallet">Pallet</option>
+      </select>
+      <br />
+      <button onclick="buttonClick()" id="calcButton" type="button"><b>Calculate</b></button>
+   </div>
+   <div id="answerBox">
+         <h4 id="answer">$0.00</h4>
+   </div>
+   <div id="tableButton">
+      <button onclick="writeTable()" id="calcButton" type="button"><b>Show Shipping Costs Table</b></button>
+   </div>
+   <script>
+      populate();
+   </script>
+   <div id="labAnswers">
+      <p>
+         <strong>labArray</strong><br />
+         1. What code is used to reserve a space in memory for an array (the array declaration)?<br />
+         <br />
+         var teamArray = new Array(4);<br />
+         <br />
+         2. What code is used to initialize this memory space with data?<br />
+         <br />
+         teamArray[x] = prompt("Please enter employee #" + (x+1), teamArray[x]); (with a for loop to give each index a value)<br />
+         <br />
+         3. If an array is named myArray, what does the number inside the square brackets designate? For example, myArray[3]<br />
+         <br />
+         The index number.<br />
+         <br />
+         4. For an array named myArray, what code would output the contents of the fourth item in the list?<br />
+         <br />
+         myArray[3] would give you that data, then just use that chunk of code like a variable for displaying it.<br />
+         <br />
+         <br />
+         <strong>labConcatenateArrays</strong><br />
+         1. For the array named myArray, what does myArray.concat() do?<br />
+         <br />
+         it takes the vales stored in that array and adds them to the item in the parenthesises.<br />
+         <br />
+         <br />
+         <strong>labForLoop</strong><br />
+         1. Why is the first way tedious and finger-numbing and the second isn't?<br />
+         <br />
+         The first way has 9 lines of lengthy code (which is mostly copied from line to line) the second has 4 short lines and dose the same thing.<br />
+         <br />
+         2. Describe the four steps that happen in a for loop in the correct order.<br />
+         <br />
+         A. A variable with a condition is fed to the for loop so it keeps repeating until that condition is not true anymore.<br />
+         B. The code inside the loop is executed.<br />
+         C. The variable that the for loop is ruing on is modified.<br />
+         D. The for loop stops if the condition has been broken, or continues if it has not.<br />
+         <br />
+         <br />
+         <strong>labDayOfWeek</strong><br />
+         1. Why is &lt;table&gt; and &lt;/table&gt; tags outside the loop?<br />
+         <br />
+         So the loop dose not make a new table each time it runs.<br />
+         <br />
+         2. In the code what does the code >31 do? Why even have that?<br />
+         <br />
+         > is an operator: great than. 31 is the integer. When used the code will check if the provided object is greater than 31. You might use this to stop for or while loops.<br />
+         <br />
+         3. Describe in detail what each loop accomplishes. Refer to the line # in your code.<br />
+         <br />
+         Line 26 writes the days at the top of the calender each in a new &lt;td>.<br />
+         Line 40 loops after the child loop runs | makes a new row in the table.<br />
+         line 43 is the child loop it writes days of the week 7 at a time each in a new &lt;td>, after it passes 31 it writes blanks.<br />
+         <br />
+      </p>
+   </div>
+   </body>
+</html>

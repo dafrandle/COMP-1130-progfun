@@ -1,0 +1,51 @@
+/*
+prjJSintro.css
+Purpose: Homepage that shows my ability to make code
+Dustin Frandle - dafrandle@yahoo.com
+Project: JS Intro
+Written - Jan 29th 2016
+
+*/
+
+html {
+   background-color: #243F5C;
+   color: #ffffff;
+}
+
+body { 
+   margin-left: auto;
+   margin-right: auto;
+   width: 80em;
+}
+
+.text1 {
+   background-color: #4B79AB;
+}
+
+.text2 {
+   background-color: #4B79AB;
+}
+
+.text3 {
+   margin-left: auto;
+   margin-right: auto;
+   width: 12em;
+}
+
+img.Me {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.top p {
+   margin-left: auto;
+   margin-right: auto;
+   width: 50em;
+}
+
+.top h1 {
+   margin-left: auto;
+   margin-right: auto;
+   width: 36em;
+}

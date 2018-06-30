@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--**************************** HEAD ********************************-->
+   <head>
+      <title>Medical Records</title>
+      <meta charset="utf-8" />
+<!--****************************** Author *******************************
+registration.html
+Purpose: Medical Database system
+Dustin Frandle - dafrandle@yahoo.com
+Project: Decision Operator
+Written - 3/1/2016
+
+-->
+<!--****************************** Debugging *****************************
+registration.html must be in the same directory as index.html and script.js
+-->
+      <script src="script.js"></script>  <!-- javascript code link -->
+      <!-- style for this page -->
+      <style type="text/css"> 
+      body {
+         font-family: Arial, Helvetica, Verdana, sans-serif;
+         font-size: 32px;
+      }
+      #header {
+         text-align:center;
+      }
+      #patientData {
+         margin: auto;
+         border-style: solid;
+         border-color: black;
+         border-width: thick;
+         width: 600px;
+         font-size: 18px;
+         background-color: #C4BFBE;
+         height: auto;
+      }
+      #patientFirst {
+         width: 400px;
+      }
+      #patientLast {
+         margin-left: 1px;
+         width: 400px;
+      }
+      #formHead {
+         font-size: 20px;
+      }
+      .name {
+         margin-left: 20px;
+      }
+      #name {
+         border-style: solid;
+         border-color: black;
+         border-width: thin;
+         padding: 30px;
+      }
+      #heightWeight {
+         float: left;
+         border-style: solid;
+         border-color: black;
+         border-width: thin;
+         padding: 30px;
+      }
+      #doctor {
+         border-style: solid;
+         border-color: black;
+         border-width: thin;
+         margin-left: 274px;
+         padding: 30px;
+         padding-bottom: 31px;
+      }
+      #doctorName {
+         width: 275px;
+      }
+      #button {
+         text-align: center;
+         border-style: solid;
+         border-color: black;
+         border-width: thin;
+         padding: 30px;
+      }
+      #submit {
+         margin-left: 190px;
+         font-size: 20px;
+         padding-bottom: 10px;
+         padding-top: 10px;
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+      #cancel {
+         font-size: 20px;
+         padding-bottom: 10px;
+         padding-top: 10px;
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+      </style>
+   </head>
+<!-- *************************** BODY ********************************-->
+   <body>
+      <h1 id="header">New Patient Form</h1>
+      <div id="patientData">
+         <form>
+            <div id="name">   <!--**********************************************   Patient's name   ****************************************************************************-->
+               <label for="patientFirst" id="formHead" >Patient's name</label>
+               <br />
+               <label for="patientFirst" class="name" >First name:</label>
+               <input
+                  type="text"
+                  name="patientFirst"
+                  id="patientFirst"
+                  value="Bob"
+               />
+               <br />
+               <label for="patientLast" class="name" >Last name:</label>
+               <input
+                  type="text"
+                  name="patientLast"
+                  id="patientLast"
+                  value="Hope" 
+               />
+            </div>
+            <div id="heightWeight">   <!--**************************************   Patient's height & weight  ******************************************************************-->
+               <label for="patientWeight" >Patient's weight in pounds</label>
+               <br />
+               <input
+                  type="text"
+                  name="patientWeight"
+                  id="patientWeight"
+                  value="128"
+               />
+               <br />
+               <br />
+               <label for="patientHeight" >Patient's height in inches</label>
+               <br />
+               <input
+                  type="text"
+                  name="patientHeight"
+                  id="patientHeight"
+                  value="70"
+               />
+            </div>
+            <div id="doctor">   <!--********************************************   Personnel's first and last name & Patient visit reason **************************************-->
+               <label for="doctorName" >Personnel's first and last name</label>
+               <br />
+               <input
+                  type="text"
+                  name="doctorName"
+                  id="doctorName"
+                  value="Guy Fieri"
+               />
+               <br />
+               <select id="doctorType" onclick="nurse()" >
+                  <option value="Nurse" id="nurse" >Select Specialty</option>
+                  <option value="Cardiologist">Cardiologist</option>
+                  <option value="Pulmonologist">Pulmonologist</option>
+                  <option value="Otolaryngologist">Otolaryngologist</option>
+               </select>
+               <br />
+               <label for="lungsHeartENT" >Patient visit reason</label>
+               <br />
+               <select id="lungsHeartENT" onclick="checkup()" >
+                  <option value="Checkup" id="checkup" >Select Condition</option>
+                  <option value="Heart">Heart</option>
+                  <option value="Lungs">Lungs</option>
+                  <option value="Ears-Nose-Throat">Ears-Nose-Throat</option>
+               </select>
+            </div>
+            <div id="button">   <!--********************************************   Buttons   ***********************************************************************************-->
+               <button type="button" id="cancel" onclick="logout()" ><b>Cancel</b></button>
+               <button type="button" id="submit" onclick="processTheData()" ><b>Submit</b></button>
+            </div>  
+         </form> 
+      </div>
+      <div style="
+            font-size: 13px; 
+            margin-left: 200px; 
+            margin-right: 200px; 
+            margin-top: 100px;" 
+                        id="data"><!--***********************************************   processTheData() output - hidden at first   ***********************************************
+                                                div data has evrything but the ekg chart in it | div ekgName is the title for the ekg | dic ekg is the chart itself
+         ***************************************************************************************************************************************************************************-->
+         <br />
+      </div>
+      <div style="font-size: 13px; margin-left: 200px; margin-right: 200px; margin-top: 100px; text-align: center;" id="ekgName">
+         <br />
+      </div>
+      <div style="font-size: 13px; margin-left: 200px; margin-right: 200px; text-align: center;">
+         <h1 id="ekg">
+         </h1>
+      </div>
+   </body>
+</html>

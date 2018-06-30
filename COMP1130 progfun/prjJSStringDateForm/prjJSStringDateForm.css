@@ -1,0 +1,117 @@
+/*
+prjJSStringDateForm.css
+Purpose: use string functions
+Dustin Frandle - dafrandle@yahoo.com
+Project: String Date Form
+Written - 4/6/2016
+*/
+
+body {
+   font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+#box {
+   margin: 0px auto;
+   margin-top: 100px;
+   border-style: solid;
+   border-color: black;
+   border-width: thick;
+   background-color: #C4BFBE;
+   height: auto;
+   text-align: justify;
+   max-width: 700px;
+   width: auto;
+   font-size: 23px;
+}
+#head {
+   text-align: center;
+}
+#userIdEntry {
+   float: left;
+   margin-left: 10px;
+   
+}
+#userIdResponse {
+   float: left;
+   font-size: 12px;
+   color: red;
+   margin-left: 10px;
+   padding-top: 27px;
+   
+}
+#userNameEntry {
+   float: left;
+   margin-left: 10px;
+   
+}
+#phoneNumEntry {
+   float: left;
+   margin-left: 10px;
+   
+}
+#phoneNumResponse {
+   float: left;
+   font-size: 12px;
+   color: red;
+   padding-top: 27px;
+   
+}
+#dobEntry {
+   float: left;
+   margin-left: 10px;
+   
+}
+#dobResponse {
+   float: left;
+   font-size: 12px;
+   color: red;
+   margin-left: 10px;
+   padding-top: 27px;
+   
+}
+#userID {
+   width: 150px;
+   font-size: 23px;
+   
+}
+#userName {
+   width: 200px;
+   font-size: 23px;
+   
+}
+#userNameM {
+   width: 25px;
+   font-size: 23px;
+   
+}
+#userNameL {
+   width: 200px;
+   font-size: 23px;
+   
+}
+#phoneNum {
+   width: 250px;
+   font-size: 23px;
+   
+}
+#dob {
+   width: 250px;
+   font-size: 23px;
+   
+}
+#memberID {
+   margin: 5px;
+   color: red;
+}
+#mpn {
+   margin: 10px;
+}
+#memberNumber {
+   text-align: center;
+}
+.spec {
+   font-size: 12px;
+   float: left;
+   margin:15px;
+   margin-bottom: 0px;
+   margin-top: 0px;
+}
